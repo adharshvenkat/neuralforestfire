@@ -8,15 +8,10 @@ Created on Sun May  3 16:29:00 2020
 #%%
 
 #Importing libraries 
-
 import numpy as np
-
 from keras.models import Sequential
-
 from keras.layers import Dense
-
 from sklearn.model_selection import train_test_split
-
 #%%
 
 fire_data = {'parameters': np.array([[97.06, 68.55, 408.55, 22.45, 114.03],
@@ -44,39 +39,18 @@ fire_data = {'parameters': np.array([[97.06, 68.55, 408.55, 22.45, 114.03],
                               23.39, 21.15, 20.80, 18.16, 13.53, 11.40,
                               10.84, 10.60])}
 
-
 X_train, X_test, Y_train, Y_test = train_test_split(fire_data['parameters'], fire_data['target'], random_state = 0)
-
-
 #%%
 
 model = Sequential()
-
-
 model.add(Dense(200, activation='relu', input_dim=5))
-
-
 model.add(Dense(40, activation='relu'))
-
-
 model.add(Dense(20, activation='relu'))
-
-
 model.add(Dense(1, activation='relu'))
-
-
 model.compile(loss = 'mse', optimizer='adam')
-
 history = model.fit(X_train, Y_train, epochs = 3500)
-
 #%%
 
 model.summary()
-
 pred_FWI = model.predict(para_FWI_test)
-
 print(pred_FWI)
-
-
-
-

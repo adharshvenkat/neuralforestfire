@@ -9,4 +9,6 @@
 
 <p>The main objective is to use deep learning to evaluate critical forest fire parameters, which will be discussed in detail in the coming sections, to predict the FWI and subsequently classify the output into one of the six classes of risk, namely Very Low, Low, Moderate, High, Very High and Extreme.</p>
 
+<b>Classifying the predicted output into Danger Classes</b>
+
 ![](Danger_Class.png)

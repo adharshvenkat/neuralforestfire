@@ -6,9 +6,9 @@ Created on Sat May  2 12:46:52 2020
 """
 
 #%%
+
 #Preprosessing and readin of information from the dataset
 import csv
-
 
 FFMC=[]
 DMC=[]
@@ -20,7 +20,6 @@ temp_dev_nor=[]
 rh_dev_nor=[]
 fire_prob=[]
 
-
 with open(r'C:\Users\Adharsh\OneDrive\Documents\Personal\Capstone Project\forestfires.csv') as file:
     reader = csv.reader(file)
     for row in reader:
@@ -29,12 +28,10 @@ with open(r'C:\Users\Adharsh\OneDrive\Documents\Personal\Capstone Project\forest
         DC.append(row[6])
         ISI.append(row[8])
         
-
 FFMC = FFMC[20:25]
 DMC = DMC[20:25]
 DC = DC[20:25]
 ISI = ISI[20:25]
-
 
 for i in range(len(FFMC)):
     FFMC[i] = float(FFMC[i])
@@ -43,7 +40,6 @@ for i in range(len(FFMC)):
     ISI[i] = float(ISI[i])
 
 length = len(FFMC)
-    
 #%%
 
 para_FWI_test = []
@@ -59,6 +55,4 @@ for i in range(length):
     para_FWI_test[i].append(pred_BUI[i][0])
 
 para_FWI_test = np.array(para_FWI_test)
-
-
     

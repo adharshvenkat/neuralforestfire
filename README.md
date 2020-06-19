@@ -1,4 +1,5 @@
 # NeuralForestFire
+by <b>Adharsh Venkatachalam</b>
 <p>Using  Multi-Layered Perceptron Neutral Networks (MLPNN) for the prediction of forest fire parameters</p>
 <p>This project depicts the classic and highly effective algorithm, Multi-layer Perceptron Neural Network for regression. The idea is to predict the fire weather danger parameter, Fire Weather Index, in forest areas by taking into consideration the soil & weather factors to estimate the level of fire hazard in a forest area.<p>
 
